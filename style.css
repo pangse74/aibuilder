@@ -1,1 +1,71 @@
-/* Add styles here */
+
+body {
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.lotto-app {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#generate-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#generate-btn:hover {
+    background-color: #45a049;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#number-display {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.lotto-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Color palette for the lotto numbers */
+.lotto-number:nth-child(6n+1) { background-color: #f44336; } /* Red */
+.lotto-number:nth-child(6n+2) { background-color: #2196F3; } /* Blue */
+.lotto-number:nth-child(6n+3) { background-color: #FFC107; } /* Amber */
+.lotto-number:nth-child(6n+4) { background-color: #9C27B0; } /* Purple */
+.lotto-number:nth-child(6n+5) { background-color: #009688; } /* Teal */
+.lotto-number:nth-child(6n+6) { background-color: #E91E63; } /* Pink */
