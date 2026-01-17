@@ -1,44 +1,69 @@
 
 body {
     font-family: sans-serif;
-    background-color: #f0f2f5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --app-bg-color: white;
+    --btn-bg-color: #4CAF50;
+    --btn-text-color: white;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f2f5;
+    --app-bg-color: #2c2c2c;
+    --btn-bg-color: #5a5a5a;
+    --btn-text-color: #f0f2f5;
+    --shadow-color: rgba(255, 255, 255, 0.1);
 }
 
 .lotto-app {
-    background-color: white;
+    background-color: var(--app-bg-color);
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px var(--shadow-color);
     text-align: center;
     width: 90%;
     max-width: 500px;
 }
 
 h1 {
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 30px;
 }
 
-#generate-btn {
-    background-color: #4CAF50;
-    color: white;
+#generate-btn, #theme-toggle-btn {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
     padding: 15px 30px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    margin-bottom: 10px;
 }
 
-#generate-btn:hover {
+#generate-btn:hover, #theme-toggle-btn:hover {
     background-color: #45a049;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode #generate-btn:hover, body.dark-mode #theme-toggle-btn:hover {
+    background-color: #6a6a6a;
 }
 
 #number-display {
@@ -59,7 +84,7 @@ h1 {
     color: white;
     font-size: 24px;
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 /* Color palette for the lotto numbers */
